@@ -34,10 +34,17 @@ function axiosAPI(userEntry) {
     const axios = require('axios');
     let query;
 
+    if (userInput.length > 0) {
+        userInput = userInput.split(" ").join("+");
+    }
+
     if (userEntry == "concert-this") {
         query = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
     }
     else {
+        if (userInput.length == 0) {
+            userInput = "Mr.+Nobody";
+        }
         query = "http://www.omdbapi.com/?t=" + userInput + "&apikey=trilogy";
     }
 
@@ -89,8 +96,17 @@ function spotifyAPI(userEntry) {
     const keys = require("./keys.js");
     const SpotifyNodeAPI = require('node-spotify-api');
     const spotify = new SpotifyNodeAPI(keys.spotify);
-    console.log(spotify);
-    console.log('');
+
+    spotify.search({ type: 'track', query: 'All the Small Things' })
+        .then(function (response) {
+            logging("The artist(s) name is " + response.tracks.items[0].artists[0].name + ".");
+            logging("The song's name is " + response.tracks.items[0].name + ".");
+            logging("The preview link is " + response.tracks.items[0].preview_url + ".");
+            logging("The song " + response.tracks.items[0].name + " is from the album " + response.tracks.items[0].album.name);
+        })
+        .catch(function (err) {
+            logging(err);
+        });
 }
 
 function userAction() {
@@ -108,6 +124,9 @@ function userAction() {
     }
 }
 
+userCommand = "spotify-this-song";
+
+
 if (userCommand == 'do-what-it-says') {
     fs.readFile('random.txt', 'utf8', function (error, data) {
 
@@ -120,14 +139,13 @@ if (userCommand == 'do-what-it-says') {
         userCommand = dataArr[0].trim();
         userInput = dataArr[1].trim();
         userInput = userInput.split('"').join("");
-        userInput = userInput.split(" ").join("+");
         logging("* * * * * do-what-it-says * * * * *");
 
         userAction();
     });
 }
 else if (userCommand == "concert-this" || userCommand == "movie-this" || userCommand == "spotify-this-song") {
-    logging("* * * * * " + userEntry + "* * * * *");
+    logging("* * * * * " + userCommand + "* * * * *");
     userAction();
 }
 else {
