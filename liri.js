@@ -92,12 +92,16 @@ function axiosAPI(userEntry) {
     });
 }
 
-function spotifyAPI(userEntry) {
+function spotifyAPI() {
     const keys = require("./keys.js");
     const SpotifyNodeAPI = require('node-spotify-api');
     const spotify = new SpotifyNodeAPI(keys.spotify);
 
-    spotify.search({ type: 'track', query: 'All the Small Things' })
+    if (userInput.length == 0) {
+        userInput = "The Sign";
+    }
+
+    spotify.search({ type: 'track', query: userInput })
         .then(function (response) {
             logging("The artist(s) name is " + response.tracks.items[0].artists[0].name + ".");
             logging("The song's name is " + response.tracks.items[0].name + ".");
@@ -116,16 +120,13 @@ function userAction() {
             axiosAPI(userCommand);
             break;
         case "spotify-this-song":
-            spotifyAPI(userCommand);
+            spotifyAPI();
             break;
         default:
             invalidEntry();
             break;
     }
 }
-
-userCommand = "spotify-this-song";
-
 
 if (userCommand == 'do-what-it-says') {
     fs.readFile('random.txt', 'utf8', function (error, data) {

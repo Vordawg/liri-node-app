@@ -54,3 +54,40 @@ The artist(s) name is blink-182.
 The song's name is All The Small Things.
 The preview link is null.
 The song All The Small Things is from the album Enema Of The State
+* * * * * spotify-this-song* * * * *
+The song's name is All The Small Things.
+The song All The Small Things is from the album Enema Of The State
+The preview link is null.
+The artist(s) name is blink-182.
+* * * * * Invalid Entry * * * * *
+Invalid node command. Please enter one of the following:
+node liri.js concert-this <artist/band name here>
+node liri.js movie-this <movie name here>
+node liri.js spotify-this-song <song name here>
+node liri.js do-what-it-says
+* * * * * movie-this* * * * *
+The movie's title is Gremlins 2: The New Batch.
+The year of the movie is 1990.
+The movie's rating is 6.4.
+The movie was produced in USA.
+The movie's Rotten Tomatoes rating is 69%.
+The language of the movie is English.
+The plot of the movie is The Gremlins are back, and this time, they've taken control of a New York City media mogul's high-tech skyscraper..
+The actors of the movie are Zach Galligan, Phoebe Cates, John Glover, Robert Prosky.
+* * * * * concert-this* * * * *
+Error
+undefined
+* * * * * concert-this* * * * *
+Error
+undefined
+* * * * * concert-this* * * * *
+The concert will be held in venue Canadian Tire Centre.
+The city the venue will be in Ottawa.
+The country the concert will be in Canada.
+The concert will be held on 10-15-2019.
+* * * * * concert-this* * * * *
+Error
+undefined
+* * * * * concert-this* * * * *
+Error
+undefined
