@@ -91,3 +91,46 @@ undefined
 * * * * * concert-this* * * * *
 Error
 undefined
+* * * * * Invalid Entry * * * * *
+Invalid node command. Please enter one of the following:
+node liri.js concert-this <artist/band name here>
+node liri.js movie-this <movie name here>
+node liri.js spotify-this-song <song name here>
+node liri.js do-what-it-says
+* * * * * movie-this* * * * *
+The movie's title is Gremlins 2: The New Batch.
+The movie's Rotten Tomatoes rating is 69%.
+The movie's rating is 6.4.
+The year of the movie is 1990.
+The language of the movie is English.
+The plot of the movie is The Gremlins are back, and this time, they've taken control of a New York City media mogul's high-tech skyscraper..
+The actors of the movie are Zach Galligan, Phoebe Cates, John Glover, Robert Prosky.
+The movie was produced in USA.
+* * * * * Invalid Entry * * * * *
+Invalid node command. Please enter one of the following:
+node liri.js concert-this <artist/band name here>
+node liri.js spotify-this-song <song name here>
+node liri.js movie-this <movie name here>
+node liri.js do-what-it-says
+* * * * * concert-this* * * * *
+The concert will be held in venue Rocket Mortgage FieldHouse.
+The city the venue will be in Cleveland.
+The state/province the concert will be held in OH.
+The country the concert will be in United States.
+The concert will be held on 10-18-2019.
+* * * * * Invalid Entry * * * * *
+Invalid node command. Please enter one of the following:
+node liri.js spotify-this-song <song name here>
+node liri.js concert-this <artist/band name here>
+node liri.js movie-this <movie name here>
+node liri.js do-what-it-says
+* * * * * spotify-this-song* * * * *
+The artist(s) name is Aerosmith.
+The song's name is Walk This Way.
+The preview link is https://p.scdn.co/mp3-preview/f744fafea7f807dd79503249f4238a21393daf8f?cid=94fc9d567e4d408ea9bcf1c2b503acb4.
+The song Walk This Way is from the album Toys In The Attic
+* * * * * do-what-it-says * * * * *
+The concert will be held in venue Canadian Tire Centre.
+The country the concert will be in Canada.
+The concert will be held on 10-15-2019.
+The city the venue will be in Ottawa.
